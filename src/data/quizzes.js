@@ -914,13 +914,13 @@ export default {
     {
       "q": "After all 5 sneaker-business transactions, final Owner's Equity is:",
       "options": [
+        "$17,000",
         "$15,000",
         "$13,500",
-        "$12,000",
-        "$1,500"
+        "$12,000"
       ],
-      "answer": 2,
-      "explanation": "Equity = Assets ($13,500) − Liabilities ($1,500) = $12,000. (Start $15,000 + revenue $3,000 − drawings $1,000... loan repaid hits cash & liabilities.)"
+      "answer": 0,
+      "explanation": "Equity = Capital $15,000 + Revenue $3,000 − Drawings $1,000 = $17,000. Repaying $500 of the payable only touches cash & liabilities, not equity. Check: Assets $18,500 − Liabilities $1,500 = $17,000."
     },
     {
       "q": "Why must the accounting equation ALWAYS balance?",
@@ -991,13 +991,13 @@ export default {
     {
       "q": "After all sneaker-business transactions, TOTAL ASSETS equal:",
       "options": [
+        "$18,500",
         "$15,000",
         "$13,500",
-        "$12,000",
-        "$1,500"
+        "$11,500"
       ],
-      "answer": 1,
-      "explanation": "Cash $11,500 + Equipment $5,000 + Supplies $2,000 = $13,500."
+      "answer": 0,
+      "explanation": "Cash $11,500 + Equipment $5,000 + Supplies $2,000 = $18,500. Don't forget the $5,000 equipment is still an asset."
     },
     {
       "q": "After all transactions, TOTAL LIABILITIES equal:",

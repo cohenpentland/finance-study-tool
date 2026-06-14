@@ -253,8 +253,8 @@ export default {
         type: 'formulas',
         heading: 'ROI & Residual Income',
         items: [
-          { name: 'Return on Investment (ROI)', formula: 'Operating Profit ÷ Operating Assets × 100', meaning: 'Percentage return generated on the assets.' },
-          { name: 'Residual Income (RI)', formula: 'Operating Profit − (Operating Assets × Required Rate)', meaning: 'Profit earned ABOVE the minimum required return, in $.' },
+          { name: 'Return on Investment (ROI)', formula: 'Operating Profit ÷ Total Investment × 100', meaning: 'Percentage return generated on the investment (operating assets).' },
+          { name: 'Residual Income (RI)', formula: 'Operating Profit − (Total Investment × Required Rate)', meaning: 'Profit earned ABOVE the minimum required return, in $.' },
         ],
       },
       {

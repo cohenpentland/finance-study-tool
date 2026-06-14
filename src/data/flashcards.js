@@ -215,7 +215,7 @@ export default {
     },
     {
       "front": "Sneaker business final balances",
-      "back": "Assets $13,500 = Liabilities $1,500 + Equity $12,000. ✓ Balanced."
+      "back": "Assets $18,500 = Liabilities $1,500 + Equity $17,000. ✓ Balanced. (Cash $11,500 + Equipment $5,000 + Supplies $2,000 = $18,500.)"
     },
     {
       "front": "Collect cash from a debtor",
