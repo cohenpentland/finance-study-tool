@@ -53,7 +53,7 @@ export default function App() {
         {view === 'formulas' && <FormulaSheet />}
         {view === 'statements' && <WorkedStatements />}
         {view === 'mockExam' && (
-          <MockExam topics={topics} quizzes={quizzes} onExit={() => { setView('topics'); refresh(); }} />
+          <MockExam onExit={() => { setView('topics'); refresh(); }} />
         )}
         {view === 'dashboard' && (
           <ProgressDashboard topics={topics} quizzes={quizzes} flashcards={flashcards} progress={progress} onOpenTopic={openTopic} onChange={refresh} key={rev} />
