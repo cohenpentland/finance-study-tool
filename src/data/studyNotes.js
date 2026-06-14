@@ -1,11 +1,11 @@
-// Rich per-topic study notes — recovered from the original tool's Study mode
-// (structure cards, definition cards and all formulas are verbatim) and expanded
-// with intro explanations, memory hooks and worked formulas.
+// Rich per-topic study notes, rebuilt from the actual ACC10007 course notes
+// (W1–W11) and the Final Exam Prep sheet so the content matches what was taught.
 //
 // Section shapes:
-//   { type:'intro',    heading, body }                       // paragraph(s)
+//   { type:'intro',    heading, body }
 //   { type:'cards',    heading, items:[{name,icon,accent,points?,desc?}] }
 //   { type:'formulas', heading, items:[{name,formula,meaning?}] }
+//   { type:'table',    heading, columns:[...], rows:[[...]], note? }
 //   { type:'callout',  tone:'key'|'tip'|'warn', body }
 export default {
   1: {
@@ -13,27 +13,50 @@ export default {
       {
         type: 'intro',
         heading: 'Financial vs Management Accounting',
-        body: 'FINANCIAL accounting reports to EXTERNAL users — investors, banks, creditors, the ATO. It must follow AASB standards, is historical, mandatory and usually audited, and is reported on a regular cycle (annually). MANAGEMENT accounting is for INTERNAL managers: flexible, no required format, forward-looking (budgets, forecasts, cost analysis) and used to make decisions like pricing and expansion.',
+        body: 'Accounting is an information system that IDENTIFIES, RECORDS and COMMUNICATES the economic events of an entity to help users make decisions. It splits into two branches: FINANCIAL accounting (mainly for external users) and MANAGEMENT accounting (internal only).',
+      },
+      {
+        type: 'table',
+        heading: 'Financial vs Management Accounting',
+        columns: ['Feature', 'Financial', 'Management'],
+        rows: [
+          ['Audience', 'Mainly external (investors, banks, ATO)', 'Internal only (managers)'],
+          ['Reports', 'General purpose', 'Specific purpose'],
+          ['Detail', 'Broad overview', 'Quite detailed'],
+          ['Rules', 'Must follow accounting standards (AASB)', 'No restrictions'],
+          ['Frequency', 'Mainly annual / semi-annual', 'Whenever required'],
+          ['Time horizon', 'Mainly historical', 'Past AND future'],
+          ['Info type', 'Money terms; objective & verifiable', 'Can include non-financial info'],
+        ],
       },
       {
         type: 'callout',
         tone: 'tip',
-        body: 'Memory hook — Financial = your TAX RETURN (formal, for outsiders, about the past). Management = your PRIVATE NOTES (flexible, for you, about the future).',
+        body: 'Memory hook — Financial = your TAX RETURN (formal, for outsiders, about the past). Management = your PRIVATE NOTES (flexible, for you, about the future). For the exam’s “small partnership considering expansion”, the answer is MANAGEMENT accounting (budgets, forecasts, CVP/break-even).',
+      },
+      {
+        type: 'table',
+        heading: 'The Three Business Structures',
+        columns: ['Structure', 'Owners', 'Liability'],
+        rows: [
+          ['Sole Proprietorship', '1', 'Unlimited personal liability'],
+          ['Partnership', '2 or more', 'Shared — unlimited (joint & several)'],
+          ['Company (Ltd / Pty Ltd)', 'Shareholders', 'Limited to amount invested'],
+        ],
+        note: 'A company is a SEPARATE LEGAL ENTITY — only it offers limited liability.',
       },
       {
         type: 'cards',
-        heading: 'The Four Business Structures',
+        heading: 'Public vs Proprietary Companies',
         items: [
-          { name: 'Sole Trader', icon: '👤', accent: 'blue', points: ['Owned by ONE person', 'Simple to set up, low cost', 'UNLIMITED personal liability ⚠️', 'Not a separate legal entity', 'Owner taxed personally on profits'] },
-          { name: 'Partnership', icon: '👥', accent: 'purple', points: ['2 or more owners sharing profits', 'Governed by a Partnership Agreement', 'ALL partners = UNLIMITED joint liability ⚠️', 'Easy to set up, shared resources', 'Each partner taxed on their share'] },
-          { name: 'Company (Pty Ltd)', icon: '🏢', accent: 'green', points: ['Separate legal entity (its own "person")', 'LIMITED liability — owners only lose their investment ✅', 'Can own assets, make contracts, sue/be sued', 'More complex + costly to set up', 'Taxed at the company tax rate'] },
-          { name: 'Trust', icon: '🤝', accent: 'amber', points: ['Assets held by a trustee FOR beneficiaries', 'Used for asset protection & tax planning', 'Complex to manage, costly', 'Common in family businesses', 'Income distributed to beneficiaries'] },
+          { name: 'Public (Ltd)', icon: '🏛️', accent: 'blue', points: ['Can sell shares to the public', 'Typically large', 'Extensive regulation', 'Must report'] },
+          { name: 'Proprietary (Pty Ltd)', icon: '🏢', accent: 'green', points: ['Cannot sell shares publicly', 'Usually smaller', 'Moderate regulation', 'Reporting depends on size'] },
         ],
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'LIMITED liability = a COMPANY only. Sole traders and partnerships carry UNLIMITED personal liability — creditors can pursue the owners’ personal assets.',
+        body: 'Corporate regulation (Australia): the CORPORATIONS ACT is the primary law, enforced by ASIC. Other regulators: ASX, ACCC, RBA, APRA, ATO.',
       },
     ],
   },
@@ -43,30 +66,30 @@ export default {
       {
         type: 'intro',
         heading: 'Qualitative Characteristics',
-        body: 'These are the qualities that make financial information USEFUL for decisions. There are two FUNDAMENTAL characteristics (info must have both) and four ENHANCING characteristics that improve usefulness.',
+        body: 'The Conceptual Framework sets the qualities that make financial information USEFUL for decisions. There are two FUNDAMENTAL characteristics (information must have both) and four ENHANCING characteristics that improve usefulness.',
       },
       {
         type: 'cards',
         heading: 'Two Fundamental Characteristics',
         items: [
-          { name: 'Relevance', icon: '🎯', accent: 'sky', desc: 'Information that can MAKE A DIFFERENCE to decisions — it has predictive value, confirmatory value, and considers materiality.' },
-          { name: 'Faithful Representation', icon: '✅', accent: 'green', desc: 'Information must be COMPLETE, NEUTRAL (unbiased) and FREE FROM ERROR.' },
+          { name: 'Relevance', icon: '🎯', accent: 'sky', desc: 'Capable of MAKING A DIFFERENCE to decisions — it has predictive value, confirmatory value, and considers materiality.' },
+          { name: 'Faithful Representation', icon: '✅', accent: 'green', desc: 'COMPLETE, NEUTRAL (unbiased) and FREE FROM ERROR.' },
         ],
       },
       {
         type: 'cards',
         heading: 'Four Enhancing Characteristics (C-V-T-U)',
         items: [
-          { name: 'Comparability', icon: '⚖️', accent: 'blue', desc: 'Identify similarities/differences between entities and periods. Needs CONSISTENT policies.' },
-          { name: 'Verifiability', icon: '🔍', accent: 'purple', desc: 'Different knowledgeable observers could reach the same conclusion.' },
-          { name: 'Timeliness', icon: '⏰', accent: 'amber', desc: 'Available when it is still useful for decisions. Old news is not helpful!' },
-          { name: 'Understandability', icon: '💡', accent: 'sky', desc: 'Clearly classified and presented for a reasonably knowledgeable user.' },
+          { name: 'Comparability', icon: '⚖️', accent: 'blue', desc: 'Consistent across entities and periods, so users can spot similarities and differences.' },
+          { name: 'Verifiability', icon: '🔍', accent: 'purple', desc: 'Independent observers could confirm the information.' },
+          { name: 'Timeliness', icon: '⏰', accent: 'amber', desc: 'Available before it loses its capacity to influence decisions.' },
+          { name: 'Understandability', icon: '💡', accent: 'sky', desc: 'Classified, characterised and presented clearly for knowledgeable users.' },
         ],
       },
       {
         type: 'callout',
         tone: 'tip',
-        body: 'Enhancing characteristics BOOST useful information — but they can never make irrelevant or unfaithful information useful.',
+        body: 'Q2 is 6 marks — likely one mark per characteristic with a brief definition. Don’t confuse fundamental with enhancing. If Relevance and Faithful Representation aren’t met, the other four don’t matter.',
       },
     ],
   },
@@ -75,31 +98,40 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'Cash vs Accrual — The Core Difference',
-        body: 'CASH basis records transactions only when cash actually moves. ACCRUAL basis records revenue when it is EARNED and expenses when they are INCURRED — regardless of when cash changes hands. AASB standards REQUIRE the accrual basis because it gives a truer picture of performance.',
+        heading: 'Cash vs Accrual Accounting',
+        body: 'CASH accounting records transactions only when cash is received or paid. ACCRUAL accounting records revenue when EARNED and expenses when INCURRED, regardless of the cash flow. AASB requires the accrual basis for general-purpose reports because it applies the matching principle and gives a truer picture of performance.',
       },
       {
-        type: 'callout',
-        tone: 'tip',
-        body: 'Example — work is done in June but the customer pays in July. Accrual recognises the revenue in JUNE (when earned); cash basis would wait until July.',
+        type: 'table',
+        heading: 'Cash vs Accrual',
+        columns: ['', 'Cash basis', 'Accrual basis'],
+        rows: [
+          ['Revenue recorded when', 'Cash received', 'Earned (regardless of cash)'],
+          ['Expense recorded when', 'Cash paid', 'Incurred (regardless of cash)'],
+          ['Required by AASB?', 'No', 'Yes'],
+          ['Matches revenue & expense?', 'No', 'Yes — matching principle'],
+        ],
+        note: 'Example: work done in June, paid in July → accrual recognises the revenue in JUNE.',
       },
       {
         type: 'intro',
-        heading: 'Depreciation',
-        body: 'Depreciation spreads the cost of a non-current asset over its useful life. It is a NON-CASH expense — the cash already left when the asset was bought; depreciation just allocates that cost across the periods that benefit. It reduces the asset (via accumulated depreciation) and reduces profit on the Income Statement.',
+        heading: 'Depreciation & Amortisation',
+        body: 'DEPRECIATION is the systematic allocation of a TANGIBLE asset’s cost over its useful life (AMORTISATION does the same for INTANGIBLE assets). It applies the matching principle. It is a NON-CASH expense and does NOT measure the loss in market value. Depreciation expense = the amount charged this period; accumulated depreciation = the total charged over the asset’s life.',
       },
       {
         type: 'formulas',
-        heading: 'Straight-Line Depreciation',
+        heading: 'Three Depreciation Methods',
         items: [
-          { name: 'Annual Depreciation', formula: '(Cost − Residual Value) ÷ Useful Life', meaning: 'Equal expense each year of the asset’s life.' },
-          { name: 'Carrying Amount', formula: 'Cost − Accumulated Depreciation', meaning: 'Book value — NOT the market/resale value.' },
+          { name: 'Straight-line', formula: '(Cost − Residual Value) ÷ Useful Life', meaning: 'Equal expense each year. Laptop $3,000, 3 yrs, $0 → $1,000/yr.' },
+          { name: 'Reducing-balance', formula: '(Cost − Accumulated Depreciation) × Rate', meaning: 'Higher expense early; applied to the carrying amount (e.g. computers).' },
+          { name: 'Units-of-production', formula: '[(Cost − Residual) ÷ Total est. units] × Units used', meaning: 'Based on use, not time (e.g. km driven, machine hours).' },
+          { name: 'Carrying amount', formula: 'Cost − Accumulated Depreciation', meaning: 'Book value — NOT market/resale value.' },
         ],
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'Depreciation is a NON-CASH, book figure. Accumulated depreciation reduces the asset; the expense reduces equity.',
+        body: 'In the statements: Depreciation EXPENSE → Income Statement (reduces profit). Accumulated depreciation → Balance Sheet (a contra-asset reducing the asset’s carrying amount).',
       },
     ],
   },
@@ -109,28 +141,36 @@ export default {
       {
         type: 'intro',
         heading: 'The 5 Elements of Financial Statements',
-        body: 'The Conceptual Framework defines five building blocks. Knowing the precise definitions is high-value exam content.',
+        body: 'The Conceptual Framework defines five building blocks. Knowing the precise definitions — and applying each criterion to the scenario — is high-value exam content (Q4 is 12 marks of analysis).',
       },
       {
         type: 'cards',
         heading: 'The Five Elements',
         items: [
-          { name: 'Asset', icon: '🏦', accent: 'green', desc: 'A present economic resource CONTROLLED by the entity as a result of past events, with the potential to produce future economic benefits.' },
-          { name: 'Liability', icon: '📕', accent: 'red', desc: 'A present OBLIGATION to transfer an economic resource as a result of past events.' },
-          { name: 'Equity', icon: '🧮', accent: 'sky', desc: 'The RESIDUAL interest in the assets after deducting liabilities (Assets − Liabilities).' },
+          { name: 'Asset', icon: '🏦', accent: 'green', desc: 'A present economic resource controlled by the entity as a result of past events.' },
+          { name: 'Liability', icon: '📕', accent: 'red', desc: 'A present obligation to transfer an economic resource as a result of past events.' },
+          { name: 'Owner’s Equity', icon: '🧮', accent: 'sky', desc: 'The residual interest in the assets after deducting all liabilities (Assets − Liabilities).' },
           { name: 'Income', icon: '📈', accent: 'blue', desc: 'Increases in assets / decreases in liabilities that increase equity — excluding owner contributions.' },
           { name: 'Expense', icon: '📉', accent: 'amber', desc: 'Decreases in assets / increases in liabilities that decrease equity — excluding distributions to owners.' },
         ],
       },
       {
-        type: 'intro',
-        heading: 'Recognition Criteria',
-        body: 'An item is RECOGNISED (recorded in the statements) when it meets the definition of an element AND provides useful information — i.e. it is PROBABLE that future economic benefits will flow, and the amount can be MEASURED reliably.',
+        type: 'cards',
+        heading: 'The 3 Criteria (ALL must be met)',
+        items: [
+          { name: 'Asset', icon: '🟢', accent: 'green', points: ['Present economic resource (potential to produce future benefits)', 'Controlled by the entity', 'Result of a past event'] },
+          { name: 'Liability', icon: '🔴', accent: 'red', points: ['Present obligation (no practical ability to avoid)', 'To transfer an economic resource', 'Result of a past event'] },
+        ],
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'Recognition = PROBABLE + MEASURABLE. "Probable" means more likely than not to occur.',
+        body: 'Recognition criteria (for assets AND liabilities): an item is recognised only if it provides USEFUL information — i.e. it is RELEVANT and a FAITHFUL REPRESENTATION. (Older texts phrase this as “probable + reliably measurable”.)',
+      },
+      {
+        type: 'callout',
+        tone: 'tip',
+        body: 'Highope Ltd ($300k platinum): control (licence) and past event are arguable, but future benefits are NOT probable (no platinum found, no experience), so recognising an asset would not be relevant/faithful → EXPENSE it. Always link every criterion back to the scenario facts using “because”.',
       },
     ],
   },
@@ -139,21 +179,35 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'The Fundamental Rule',
-        body: 'Every transaction is recorded so the accounting equation stays in balance. This dual effect is the heart of double-entry accounting.',
+        heading: 'The Accounting Equation',
+        body: 'Every transaction is recorded so the accounting equation stays in balance. Each transaction has a MINIMUM of two effects (dual effect) — this is the heart of double-entry accounting.',
       },
       {
         type: 'formulas',
-        heading: 'The Accounting Equation',
+        heading: 'The Equation',
         items: [
-          { name: 'Accounting Equation', formula: 'Assets = Liabilities + Equity', meaning: 'Total resources = who funded them (lenders + owners).' },
-          { name: 'Expanded Equity', formula: 'Equity = Capital + Revenue − Expenses − Drawings', meaning: 'How profit and owner activity change equity.' },
+          { name: 'Basic equation', formula: 'Assets = Liabilities + Owner’s Equity', meaning: 'Resources = how they were financed (lenders + owners).' },
+          { name: 'Extended equation', formula: 'A = L + OE + Income − Expenses + Capital − Drawings', meaning: 'Income & capital ADD to equity; expenses & drawings SUBTRACT.' },
+        ],
+      },
+      {
+        type: 'table',
+        heading: 'Transaction Patterns',
+        columns: ['Transaction', 'Effect'],
+        rows: [
+          ['Owner invests cash', 'Assets ↑, Equity ↑'],
+          ['Buy asset with cash', 'Assets ↑↓ (swap — net zero)'],
+          ['Buy asset on credit', 'Assets ↑, Liabilities ↑'],
+          ['Earn cash revenue', 'Assets ↑, Equity ↑'],
+          ['Pay cash expense', 'Assets ↓, Equity ↓'],
+          ['Repay a loan', 'Assets ↓, Liabilities ↓'],
+          ['Owner withdraws (drawings)', 'Assets ↓, Equity ↓ (NOT an expense)'],
         ],
       },
       {
         type: 'callout',
-        tone: 'tip',
-        body: 'Use the interactive step-through below to watch each transaction keep Assets = Liabilities + Equity balanced. Remember: owner DRAWINGS reduce equity but are NOT an expense.',
+        tone: 'key',
+        body: 'Sneaker business final balances: Assets $18,500 (Cash $11,500 + Equipment $5,000 + Supplies $2,000) = Liabilities $1,500 + Equity $17,000 ($15,000 capital + $3,000 revenue − $1,000 drawings). Always do the balance check. Use the interactive step-through below.',
       },
     ],
   },
@@ -162,23 +216,46 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'What Are Balance Day Adjustments?',
-        body: 'Balance day adjustments are end-of-period entries that apply the accrual basis — matching revenues and expenses to the period they belong to, regardless of when cash moved. They make profit reflect the period’s real performance.',
+        heading: 'Balance Day Adjustments',
+        body: 'Accounting divides the business’s life into artificial reporting periods. Balance day adjustments are end-of-period entries that apply the ACCRUAL basis — putting revenues and expenses in the correct period regardless of when cash moved.',
+      },
+      {
+        type: 'table',
+        heading: 'The 4 Types (Accruals vs Prepayments)',
+        columns: ['', 'Accruals', 'Prepayments'],
+        rows: [
+          ['Revenues', 'Accrued revenue → ASSET', 'Prepaid (unearned) revenue → LIABILITY'],
+          ['Expenses', 'Accrued expense → LIABILITY', 'Prepaid expense → ASSET'],
+        ],
+        note: 'Trigger words: “not yet received/paid” = accrual. “In advance / prepaid” = prepayment.',
       },
       {
         type: 'cards',
-        heading: 'The Four Adjustment Types',
+        heading: 'Effect on the Equation',
         items: [
-          { name: 'Accrued Revenue', icon: '💰', accent: 'green', desc: 'Revenue EARNED but NOT YET received → record an asset (receivable) + revenue.' },
-          { name: 'Accrued Expense', icon: '📄', accent: 'red', desc: 'Expense INCURRED but NOT YET paid → record an expense + a liability (payable).' },
-          { name: 'Prepaid Expense', icon: '⏳', accent: 'blue', desc: 'Expense PAID IN ADVANCE for a future benefit → an asset now, expensed as it is used.' },
-          { name: 'Unearned Revenue', icon: '🎫', accent: 'purple', desc: 'Cash RECEIVED but service NOT YET delivered → a liability now, revenue when earned.' },
+          { name: 'Accrued Revenue', icon: '💰', accent: 'green', desc: 'Earned, not yet received → Asset ↑ (receivable), Equity ↑ (revenue). e.g. $2,000 interest earned.' },
+          { name: 'Accrued Expense', icon: '📄', accent: 'red', desc: 'Incurred, not yet paid → Liability ↑ (payable), Equity ↓ (expense). e.g. $3,500 wages owed.' },
+          { name: 'Prepaid Expense', icon: '⏳', accent: 'blue', desc: 'Paid in advance → Asset first; as used, Asset ↓ & Equity ↓. e.g. $1,200 insurance for 6 months.' },
+          { name: 'Unearned Revenue', icon: '🎫', accent: 'purple', desc: 'Cash received before earning → Liability; as earned, Liability ↓ & Revenue ↑. e.g. $4,000 customer advance.' },
+        ],
+      },
+      {
+        type: 'intro',
+        heading: 'Bad & Doubtful Debts',
+        body: 'When a business sells on credit, some debtors won’t pay. The accrual concept requires accounting for this. There are two methods.',
+      },
+      {
+        type: 'cards',
+        heading: 'Two Methods',
+        items: [
+          { name: 'Direct Write-Off', icon: '✂️', accent: 'amber', desc: 'Write the debt off as a Bad Debts Expense only WHEN it goes bad (Accounts Receivable ↓, Expense ↑). Criticism: the loss often lands in a later period than the sale → violates matching.' },
+          { name: 'Allowance Method', icon: '🛡️', accent: 'green', desc: 'ESTIMATE uncollectible debts and record an expense in the period of sale (Allowance for Doubtful Debts ↑ as a contra-asset, Bad Debts Expense ↑). PREFERRED — it matches the expense to the revenue period.' },
         ],
       },
       {
         type: 'callout',
-        tone: 'tip',
-        body: 'Depreciation is also a balance day adjustment: the expense reduces equity and accumulated depreciation reduces the asset.',
+        tone: 'warn',
+        body: 'Forgetting an accrued expense understates expenses → OVERSTATES profit (and understates liabilities).',
       },
     ],
   },
@@ -187,31 +264,43 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'The Three Financial Statements',
-        body: 'The statements tell a connected story: the Income Statement shows performance over a period, the Balance Sheet shows position at a point in time, and the Cash Flow Statement explains how cash moved.',
-      },
-      {
-        type: 'formulas',
-        heading: 'Statement Formulas',
-        items: [
-          { name: 'Income Statement (P&L)', formula: 'Revenue − Expenses = Net Profit', meaning: 'Profitability over a PERIOD.' },
-          { name: 'Balance Sheet', formula: 'Assets = Liabilities + Equity', meaning: 'Position at a POINT IN TIME.' },
-          { name: 'Statement of Cash Flows', formula: 'Operating + Investing + Financing = Net Change in Cash', meaning: 'Cash movements over a PERIOD.' },
-        ],
+        heading: 'The Four Financial Statements',
+        body: 'The statements tell a connected story. Note there are FOUR — the Statement of Changes in Equity links profit to the Balance Sheet.',
       },
       {
         type: 'cards',
-        heading: 'Cash Flow — Three Activities',
+        heading: 'The Four Statements',
         items: [
-          { name: 'Operating', icon: '⚙️', accent: 'green', desc: 'Day-to-day trading: cash from customers, cash to suppliers and employees.' },
-          { name: 'Investing', icon: '📈', accent: 'blue', desc: 'Buying/selling non-current assets and investments.' },
-          { name: 'Financing', icon: '🏦', accent: 'purple', desc: 'Funding from owners and lenders: capital, drawings, loans, repayments.' },
+          { name: 'Statement of Financial Position (Balance Sheet)', icon: '📊', accent: 'sky', desc: 'Assets, liabilities & equity at a POINT IN TIME. Assets = Liabilities + Equity.' },
+          { name: 'Statement of Profit or Loss (Income Statement)', icon: '📈', accent: 'green', desc: 'Revenue & expenses over a PERIOD → profit.' },
+          { name: 'Statement of Changes in Owner’s Equity', icon: '🔁', accent: 'purple', desc: 'Opening Equity + Profit − Drawings = Closing Equity. Bridges profit to the Balance Sheet.' },
+          { name: 'Statement of Cash Flows', icon: '💵', accent: 'amber', desc: 'Actual cash in/out over a PERIOD, split into Operating, Investing, Financing.' },
         ],
+      },
+      {
+        type: 'formulas',
+        heading: 'Income Statement Structure',
+        items: [
+          { name: 'Gross Profit', formula: 'Sales − Cost of Sales' },
+          { name: 'Profit before tax', formula: 'Gross Profit + Other Income − Operating Expenses' },
+          { name: 'Profit after tax', formula: 'Profit before Tax − Income Tax Expense' },
+        ],
+      },
+      {
+        type: 'table',
+        heading: 'Cash Flow — Three Activities',
+        columns: ['Section', 'What it includes', 'Examples'],
+        rows: [
+          ['Operating (O)', 'Day-to-day trading', 'Receipts from customers, payments to suppliers/employees, interest paid, tax'],
+          ['Investing (I)', 'Buying/selling long-term assets', 'Buy equipment, sell property, equipment refund'],
+          ['Financing (F)', 'How the business is funded', 'Issue shares, borrow/repay loans, dividends/drawings'],
+        ],
+        note: 'Exam traps: interest PAID = Operating (AASB); dividends paid = Financing; equipment refund = Investing.',
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'Profit ≠ Cash. A profitable business can still run out of cash — the cash flow statement reconciles the two.',
+        body: 'Profit ≠ Cash. A profitable business can still run out of cash. Positive OPERATING cash flow is the key sign of health. Net change in cash = Operating + Investing + Financing.',
       },
     ],
   },
@@ -221,23 +310,46 @@ export default {
       {
         type: 'intro',
         heading: 'What is CVP Analysis?',
-        body: 'Cost-Volume-Profit analysis examines how changes in costs, volume and price affect profit. Its core idea is the Contribution Margin: each unit’s selling price minus its variable cost first covers fixed costs, then becomes profit.',
+        body: 'Cost-Volume-Profit analysis examines how costs, volume and price affect profit. It is a MANAGEMENT accounting tool for planning profit, break-even, target profit, and short-term decisions. Key assumption: costs are either FIXED or VARIABLE.',
+      },
+      {
+        type: 'cards',
+        heading: 'Cost Behaviour',
+        items: [
+          { name: 'Fixed Costs', icon: '🏠', accent: 'blue', desc: 'Do NOT change with activity (rent, insurance, depreciation). Fixed cost PER UNIT falls as volume rises.' },
+          { name: 'Variable Costs', icon: '📦', accent: 'green', desc: 'Change in direct proportion to activity (materials, commissions). Variable cost PER UNIT stays constant.' },
+          { name: 'Mixed (Semi-variable)', icon: '🔀', accent: 'amber', desc: 'Both a fixed and a variable part (e.g. electricity = service charge + usage). Split before CVP.' },
+          { name: 'Relevant Range', icon: '📏', accent: 'sky', desc: 'The activity range over which the fixed/variable assumptions hold.' },
+        ],
       },
       {
         type: 'formulas',
-        heading: 'Key CVP Formulas',
+        heading: 'Core CVP Formulas',
         items: [
-          { name: 'Contribution Margin / unit', formula: 'Selling Price − Variable Cost per unit' },
-          { name: 'CM Ratio', formula: 'CM per unit ÷ Selling Price × 100%' },
+          { name: 'CM per unit', formula: 'Selling Price − Variable Cost per unit' },
+          { name: 'CM Ratio', formula: 'CM per unit ÷ Selling Price × 100' },
           { name: 'Break-Even (units)', formula: 'Fixed Costs ÷ CM per unit' },
-          { name: 'Break-Even (dollars)', formula: 'Break-Even Units × Selling Price' },
+          { name: 'Break-Even (dollars)', formula: 'Fixed Costs ÷ CM Ratio' },
           { name: 'Target Profit (units)', formula: '(Fixed Costs + Target Profit) ÷ CM per unit' },
+          { name: 'Operating Profit', formula: 'Contribution Margin − Fixed Costs', meaning: 'The management-accounting income format: Sales − Variable = CM − Fixed = Profit.' },
         ],
+      },
+      {
+        type: 'table',
+        heading: 'Relevant Costs for Decisions',
+        columns: ['Term', 'Meaning'],
+        rows: [
+          ['Relevant cost', 'A FUTURE cost that DIFFERS between alternatives'],
+          ['Incremental cost', 'The extra cost of choosing one option'],
+          ['Opportunity cost', 'The benefit given up by not choosing the next-best option'],
+          ['Sunk cost', 'A past cost already incurred — ALWAYS irrelevant'],
+        ],
+        note: 'Make-or-buy: choose the lower of make vs buy cost. Special order: accept if incremental revenue > incremental cost (idle capacity).',
       },
       {
         type: 'callout',
         tone: 'tip',
-        body: 'Try the interactive CVP calculator below — change price, variable cost and fixed costs to watch break-even move.',
+        body: 'Café toastie: CM $8, break-even 500 units ($6,000), 750 units for $2,000 profit. Drop price to $10 → CM $6 → break-even 667 → MORE risk. Try the interactive calculator below.',
       },
     ],
   },
@@ -246,21 +358,54 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'Performance Measurement — Why it Matters',
-        body: 'Managers and investors evaluate how well a division or investment uses the assets entrusted to it. Two key measures are Return on Investment (a percentage) and Residual Income (a dollar amount).',
+        heading: 'Performance Measurement',
+        body: 'Organisations set a mission → strategy → objectives, then measure whether objectives are met. How performance is measured depends on the type of RESPONSIBILITY CENTRE a manager runs.',
+      },
+      {
+        type: 'table',
+        heading: 'Responsibility Centres',
+        columns: ['Type', 'Manager controls…', 'Measured by'],
+        rows: [
+          ['Cost Centre', 'Costs only', 'Variance from budgeted costs'],
+          ['Revenue Centre', 'Revenue only', 'Variance from budgeted revenue'],
+          ['Profit Centre', 'Costs & revenue', 'Profit (Revenue − Costs)'],
+          ['Investment Centre', 'Costs, revenue & assets', 'ROI or Residual Income'],
+        ],
+        note: 'Responsibility accounting: only judge managers on items WITHIN THEIR CONTROL.',
       },
       {
         type: 'formulas',
         heading: 'ROI & Residual Income',
         items: [
-          { name: 'Return on Investment (ROI)', formula: 'Operating Profit ÷ Total Investment × 100', meaning: 'Percentage return generated on the investment (operating assets).' },
-          { name: 'Residual Income (RI)', formula: 'Operating Profit − (Total Investment × Required Rate)', meaning: 'Profit earned ABOVE the minimum required return, in $.' },
+          { name: 'Return on Investment (ROI)', formula: 'Operating Profit ÷ Total Investment × 100', meaning: 'Alpha: $400k ÷ $2.5m = 16%. Beta: $280k ÷ $1.6m = 17.5%.' },
+          { name: 'DuPont ROI', formula: '(Profit ÷ Sales) × (Sales ÷ Investment)', meaning: 'Profit Margin × Investment Turnover.' },
+          { name: 'Residual Income (RI)', formula: 'Operating Profit − (Required Rate × Investment)', meaning: 'Alpha: $400k − (10% × $2.5m) = $150k. Beta: $280k − (12% × $1.6m) = $88k.' },
+        ],
+      },
+      {
+        type: 'cards',
+        heading: 'ROI vs RI',
+        items: [
+          { name: 'ROI — advantages', icon: '✅', accent: 'green', points: ['Single, easy summary measure', 'Compares divisions of DIFFERENT sizes (a ratio)', 'Encourages efficient asset use'] },
+          { name: 'ROI — disadvantages', icon: '⚠️', accent: 'amber', points: ['Short-term bias — may reject good projects that dilute ROI', 'Asset-age problem: old assets → low book value → inflated ROI', 'Distorted by different accounting policies'] },
+          { name: 'RI — advantage', icon: '✅', accent: 'green', desc: 'Accepts ANY project earning above the required rate → better value-creating decisions. RI > 0 = value created.' },
+          { name: 'RI — limitation', icon: '⚠️', accent: 'amber', desc: 'An absolute $ figure → can’t fairly compare divisions of different sizes.' },
+        ],
+      },
+      {
+        type: 'cards',
+        heading: 'The Balanced Scorecard (Kaplan & Norton)',
+        items: [
+          { name: 'Financial', icon: '💰', accent: 'green', desc: '“How do we look to shareholders?” — ROI, RI, profit margin, revenue growth.' },
+          { name: 'Customer', icon: '🤝', accent: 'sky', desc: '“How do customers see us?” — satisfaction, market share, retention.' },
+          { name: 'Internal Business Processes', icon: '⚙️', accent: 'blue', desc: '“What must we excel at?” — defect rate, cycle time, efficiency.' },
+          { name: 'Innovation & Improvement', icon: '🌱', accent: 'purple', desc: '“Can we keep improving?” — training, new-product revenue, R&D.' },
         ],
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'ROI is a % (good for comparing sizes); RI is a $ amount. RI avoids ROI’s underinvestment problem — a manager won’t reject a project that beats the required rate just because it lowers their average ROI.',
+        body: 'Financial measures alone are LAGGING indicators. The Balanced Scorecard adds non-financial perspectives so short-term profit isn’t chased at the expense of long-term health.',
       },
     ],
   },
@@ -269,25 +414,47 @@ export default {
     sections: [
       {
         type: 'intro',
-        heading: 'Financial Statement Analysis — The Big Picture',
-        body: 'Ratios turn the raw statements into insight: profitability, efficiency and return. DuPont analysis breaks overall return into its drivers so you can see WHY it changed.',
+        heading: 'Financial Statement Analysis',
+        body: 'Ratios turn raw statements into insight. Always compare to a benchmark: prior years (intra-entity / trend), competitors (inter-entity), or industry averages. There are FOUR categories of ratios.',
+      },
+      {
+        type: 'table',
+        heading: 'The 4 Categories',
+        columns: ['Category', 'Measures'],
+        rows: [
+          ['Liquidity', 'Short-term ability to pay debts with cash'],
+          ['Asset Efficiency', 'How efficiently assets are used to generate cash'],
+          ['Capital Structure', 'Long-term solvency / risk (use of debt)'],
+          ['Profitability', 'Operating success of the entity'],
+        ],
       },
       {
         type: 'formulas',
-        heading: 'Key Ratios',
+        heading: 'Profitability & DuPont',
         items: [
-          { name: 'Gross Profit Margin', formula: 'Gross Profit ÷ Sales × 100', meaning: 'Profitability before operating expenses.' },
-          { name: 'Profit Margin', formula: 'Net Profit ÷ Sales × 100', meaning: 'Cents of profit per $1 of sales.' },
-          { name: 'Asset Turnover', formula: 'Sales ÷ Average Total Assets', meaning: 'Sales generated per $1 of assets (efficiency).' },
-          { name: 'Return on Assets (ROA)', formula: 'Net Profit ÷ Avg Total Assets × 100', meaning: 'Overall return on assets.' },
-          { name: 'Return on Equity (ROE)', formula: "Net Profit ÷ Owner's Equity × 100", meaning: 'Return generated for the owners.' },
-          { name: 'DuPont ROA', formula: 'Profit Margin × Asset Turnover', meaning: 'Splits ROA into profitability × efficiency.' },
+          { name: 'Profit Margin', formula: 'Net Profit ÷ Sales × 100', meaning: 'Pine Ltd: $240k ÷ $3m = 8%.' },
+          { name: 'Asset Turnover', formula: 'Sales ÷ Average Total Assets', meaning: 'Pine Ltd: $3m ÷ $1.2m = 2.5×.' },
+          { name: 'ROA (DuPont)', formula: 'Profit Margin × Asset Turnover = Net Profit ÷ Avg Total Assets', meaning: 'Pine Ltd: 8% × 2.5 = 20%.' },
+          { name: 'ROE', formula: 'Net Profit ÷ Average Owner’s Equity × 100' },
+          { name: 'Gross Profit Margin', formula: 'Gross Profit ÷ Sales × 100' },
+        ],
+      },
+      {
+        type: 'formulas',
+        heading: 'Liquidity · Efficiency · Solvency',
+        items: [
+          { name: 'Current Ratio', formula: 'Current Assets ÷ Current Liabilities' },
+          { name: 'Quick (Acid-Test) Ratio', formula: '(Current Assets − Inventory) ÷ Current Liabilities' },
+          { name: 'Inventory Turnover', formula: 'Cost of Sales ÷ Average Inventory  ·  Days = 365 ÷ turnover' },
+          { name: 'Debtors Turnover', formula: 'Sales ÷ Average Trade Debtors  ·  Days = 365 ÷ turnover' },
+          { name: 'Debt to Total Assets', formula: 'Total Liabilities ÷ Total Assets × 100', meaning: 'Higher = more leveraged = more risk.' },
+          { name: 'Times Interest Earned', formula: 'EBIT ÷ Interest Expense', meaning: 'Higher = interest more safely covered.' },
         ],
       },
       {
         type: 'callout',
         tone: 'key',
-        body: 'DuPont: ROA = Profit Margin × Asset Turnover. A low ROA is either thin margins, slow asset use, or both — DuPont tells you which.',
+        body: 'DuPont: a low ROA is thin margins, slow asset turnover, or both — DuPont tells you which. No ratio is good or bad alone; always compare and explain WHY using the numbers. Improve ROA via margin (cut costs / raise prices) or turnover (more sales from the same assets).',
       },
     ],
   },

@@ -40,6 +40,18 @@ export default {
     {
       "front": "Memory hook: Financial vs Management",
       "back": "Financial = your TAX RETURN (for outsiders, formal). Management = your PRIVATE NOTES (for you, flexible)."
+    },
+    {
+      "front": "The three business structures + liability",
+      "back": "Sole Proprietorship (1 owner, UNLIMITED liability); Partnership (2+ owners, UNLIMITED joint liability); Company (shareholders, LIMITED liability, separate legal entity)."
+    },
+    {
+      "front": "Public (Ltd) vs Proprietary (Pty Ltd) company",
+      "back": "Public (Ltd): can sell shares to the public, large, heavily regulated, must report. Proprietary (Pty Ltd): cannot sell to public, smaller, moderate regulation."
+    },
+    {
+      "front": "Corporate regulation in Australia",
+      "back": "The CORPORATIONS ACT (primary law) is enforced by ASIC. Other regulators: ASX, ACCC, RBA, APRA, ATO."
     }
   ],
   "2": [
@@ -128,6 +140,18 @@ export default {
     {
       "front": "Is depreciation a cash expense?",
       "back": "No — it's a NON-CASH expense. Cash left when the asset was bought; depreciation just allocates that cost over time."
+    },
+    {
+      "front": "Three depreciation methods",
+      "back": "1) Straight-line: (Cost − Residual) ÷ Life. 2) Reducing-balance: (Cost − Accum Dep) × Rate (front-loaded). 3) Units-of-production: [(Cost − Residual) ÷ total units] × units used."
+    },
+    {
+      "front": "Reducing-balance — quick example",
+      "back": "$10,000 asset at 30%: Yr1 = $10,000 × 30% = $3,000; Yr2 = ($10,000 − $3,000) × 30% = $2,100. Higher expense early."
+    },
+    {
+      "front": "Depreciation vs Amortisation",
+      "back": "Depreciation = allocating the cost of TANGIBLE assets over their life. Amortisation = the same for INTANGIBLE assets (patents, software)."
     }
   ],
   "4": [
@@ -174,6 +198,14 @@ export default {
     {
       "front": "Revenue vs Income",
       "back": "Revenue is a sub-type of income (from ordinary activities). Income = revenue + gains."
+    },
+    {
+      "front": "Asset — 3 criteria (ALL needed)",
+      "back": "1) Present economic resource (potential future benefits), 2) Controlled by the entity, 3) Result of a past event."
+    },
+    {
+      "front": "Recognition criteria (course version)",
+      "back": "Meets the element DEFINITION + provides USEFUL info → it is RELEVANT and a FAITHFUL REPRESENTATION (complete, neutral, free from error)."
     }
   ],
   "5": [
@@ -262,6 +294,18 @@ export default {
     {
       "front": "Forget to record an accrued expense — effect?",
       "back": "Expenses understated → PROFIT OVERSTATED (and liabilities understated)."
+    },
+    {
+      "front": "Accruals vs Prepayments (2×2)",
+      "back": "Accrued revenue = ASSET. Accrued expense = LIABILITY. Prepaid (unearned) revenue = LIABILITY. Prepaid expense = ASSET."
+    },
+    {
+      "front": "Bad debts: two methods",
+      "back": "Direct write-off — expense only WHEN a debt goes bad (violates matching). Allowance method — ESTIMATE bad debts in the period of sale (PREFERRED, matches expense to revenue)."
+    },
+    {
+      "front": "Allowance for Doubtful Debts — what is it?",
+      "back": "A CONTRA-ASSET that reduces Accounts Receivable. Recording it raises Bad Debts Expense (Equity ↓) in the sale period."
     }
   ],
   "7": [
@@ -304,6 +348,18 @@ export default {
     {
       "front": "Dividends/drawings — which section?",
       "back": "FINANCING outflow (a return to the owners)."
+    },
+    {
+      "front": "The FOUR financial statements",
+      "back": "1) Balance Sheet (position, point in time), 2) Income Statement (profit, over a period), 3) Statement of Changes in Equity (links profit to balance sheet), 4) Cash Flow Statement (cash, O/I/F)."
+    },
+    {
+      "front": "Income statement structure",
+      "back": "Sales − Cost of Sales = GROSS PROFIT; + Other Income − Operating Expenses = PROFIT BEFORE TAX; − Income Tax = PROFIT AFTER TAX."
+    },
+    {
+      "front": "Statement of Changes in Equity",
+      "back": "Opening Equity + Profit − Drawings = Closing Equity. The closing figure flows onto the Balance Sheet."
     }
   ],
   "8": [
@@ -350,6 +406,18 @@ export default {
     {
       "front": "Margin of safety",
       "back": "How far actual/budgeted sales are ABOVE break-even — the cushion before the business makes a loss."
+    },
+    {
+      "front": "Fixed vs Variable vs Mixed costs",
+      "back": "Fixed: constant in total (rent). Variable: change in proportion to activity (materials). Mixed/semi-variable: both parts (electricity = service charge + usage)."
+    },
+    {
+      "front": "Relevant costs & the sunk cost rule",
+      "back": "Only FUTURE costs that DIFFER between alternatives are relevant. A SUNK cost (already incurred) is ALWAYS irrelevant. Opportunity cost = benefit given up."
+    },
+    {
+      "front": "Make-or-buy & special order rules",
+      "back": "Make-or-buy: choose the lower of make vs buy cost. Special order: accept if incremental revenue > incremental cost (and there's idle capacity)."
     }
   ],
   "9": [
@@ -396,6 +464,22 @@ export default {
     {
       "front": "'Required rate of return' = ?",
       "back": "The minimum acceptable return — the cost of capital / hurdle rate used in the RI calculation."
+    },
+    {
+      "front": "Responsibility centres",
+      "back": "Cost centre (costs only); Revenue centre (revenue only); Profit centre (costs & revenue → profit); Investment centre (costs, revenue & assets → ROI/RI)."
+    },
+    {
+      "front": "DuPont ROI decomposition",
+      "back": "ROI = Profit Margin × Investment Turnover = (Profit ÷ Sales) × (Sales ÷ Investment). Shows WHY ROI is high or low."
+    },
+    {
+      "front": "ROI 'asset age' problem",
+      "back": "Older assets have a low book value, which inflates ROI — making old-asset divisions look better and discouraging new investment."
+    },
+    {
+      "front": "Balanced Scorecard — 4 perspectives",
+      "back": "Financial · Customer · Internal Business Processes · Innovation & Improvement (Learning & Growth). Adds non-financial, leading indicators to financial lagging ones."
     }
   ],
   "10": [
@@ -442,6 +526,22 @@ export default {
     {
       "front": "What does a LOW asset turnover suggest?",
       "back": "Possibly excess, idle or underutilised assets relative to the sales being generated."
+    },
+    {
+      "front": "The 4 ratio categories",
+      "back": "Liquidity (short-term cash ability), Asset Efficiency (how hard assets work), Capital Structure (solvency/risk), Profitability (operating success)."
+    },
+    {
+      "front": "Liquidity: Current vs Quick ratio",
+      "back": "Current Ratio = Current Assets ÷ Current Liabilities. Quick (acid-test) Ratio = (Current Assets − Inventory) ÷ Current Liabilities — stricter, excludes slow inventory."
+    },
+    {
+      "front": "Asset efficiency: turnover → days",
+      "back": "Inventory Turnover = COGS ÷ Avg Inventory; Debtors Turnover = Sales ÷ Avg Debtors. Days = 365 ÷ turnover. Higher turnover / fewer days = better."
+    },
+    {
+      "front": "Capital structure (solvency) ratios",
+      "back": "Debt to Total Assets = Total Liabilities ÷ Total Assets (higher = more risk). Times Interest Earned = EBIT ÷ Interest Expense (higher = safer)."
     }
   ]
 };

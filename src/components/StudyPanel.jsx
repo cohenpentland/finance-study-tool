@@ -90,6 +90,35 @@ function Section({ section }) {
     );
   }
 
+  if (section.type === 'table') {
+    return (
+      <div>
+        {section.heading && <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">{section.heading}</h3>}
+        <div className="overflow-x-auto rounded-xl border border-slate-800">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-slate-800/60">
+                {section.columns.map((c, i) => (
+                  <th key={i} className="px-3 py-2 text-left font-semibold text-slate-200">{c}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {section.rows.map((row, i) => (
+                <tr key={i} className="border-t border-slate-800">
+                  {row.map((cell, j) => (
+                    <td key={j} className={`px-3 py-2 align-top ${j === 0 ? 'font-medium text-white' : 'text-slate-300'}`}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {section.note && <p className="mt-2 text-xs text-slate-500">{section.note}</p>}
+      </div>
+    );
+  }
+
   if (section.type === 'formulas') {
     return (
       <div>
