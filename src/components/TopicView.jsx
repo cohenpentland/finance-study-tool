@@ -4,6 +4,7 @@ import Flashcard from './Flashcard.jsx';
 import Quiz from './Quiz.jsx';
 import CVPCalculator from './CVPCalculator.jsx';
 import AccountingEquation from './AccountingEquation.jsx';
+import WorkedStatements from './WorkedStatements.jsx';
 
 const MODES = [
   { id: 'study', label: 'Study' },
@@ -14,7 +15,7 @@ const MODES = [
 export default function TopicView({ topic, questions, cards, onBack, onProgress }) {
   const [mode, setMode] = useState('study');
   // Interactive tool for the topics that have one.
-  const tool = topic.id === 8 ? 'cvp' : topic.id === 5 ? 'equation' : null;
+  const tool = topic.id === 8 ? 'cvp' : topic.id === 5 ? 'equation' : topic.id === 7 ? 'statements' : null;
 
   return (
     <div>
@@ -41,6 +42,7 @@ export default function TopicView({ topic, questions, cards, onBack, onProgress 
           <StudyPanel topicId={topic.id} cards={cards} />
           {tool === 'cvp' && <CVPCalculator />}
           {tool === 'equation' && <AccountingEquation />}
+          {tool === 'statements' && <WorkedStatements heading={false} />}
         </div>
       )}
       {mode === 'cards' && <Flashcard topicId={topic.id} cards={cards} onProgress={onProgress} />}

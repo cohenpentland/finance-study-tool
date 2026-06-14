@@ -8,6 +8,7 @@ import TopicView from './components/TopicView.jsx';
 import MockExam from './components/MockExam.jsx';
 import ProgressDashboard from './components/ProgressDashboard.jsx';
 import FormulaSheet from './components/FormulaSheet.jsx';
+import WorkedStatements from './components/WorkedStatements.jsx';
 
 const totalMarks = topics.reduce((s, t) => s + t.marks, 0);
 const totalQuestions = Object.values(quizzes).flat().length;
@@ -34,6 +35,7 @@ export default function App() {
           </button>
           <nav className="flex gap-2 text-sm">
             <NavBtn active={view === 'topics'} onClick={home}>Topics</NavBtn>
+            <NavBtn active={view === 'statements'} onClick={() => setView('statements')}>Statements</NavBtn>
             <NavBtn active={view === 'formulas'} onClick={() => setView('formulas')}>Formulas</NavBtn>
             <NavBtn active={view === 'dashboard'} onClick={() => setView('dashboard')}>Progress</NavBtn>
             <NavBtn active={view === 'mockExam'} onClick={() => setView('mockExam')} accent>Mock Exam</NavBtn>
@@ -49,6 +51,7 @@ export default function App() {
           <TopicView topic={topics.find((t) => t.id === topicId)} questions={quizzes[topicId] || []} cards={flashcards[topicId] || []} onBack={home} onProgress={refresh} />
         )}
         {view === 'formulas' && <FormulaSheet />}
+        {view === 'statements' && <WorkedStatements />}
         {view === 'mockExam' && (
           <MockExam topics={topics} quizzes={quizzes} onExit={() => { setView('topics'); refresh(); }} />
         )}
