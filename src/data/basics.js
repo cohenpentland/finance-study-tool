@@ -4,6 +4,7 @@
 export default [
   {
     num: 1, marks: 10, title: 'Financial vs Management Accounting & Structures',
+    viz: 'businessStructures',
     cards: [
       { q: 'Financial accounting — who for?', a: 'EXTERNAL users (investors, banks, ATO). Follows AASB, historical, annual.' },
       { q: 'Management accounting — who for?', a: 'INTERNAL managers. Flexible, forward-looking (budgets, forecasts).' },
@@ -14,6 +15,7 @@ export default [
   },
   {
     num: 2, marks: 6, title: 'Conceptual Framework — Characteristics',
+    viz: 'qualitativePyramid',
     cards: [
       { q: 'Two FUNDAMENTAL characteristics?', a: 'Relevance + Faithful Representation.' },
       { q: 'Faithful representation =', a: 'Complete, Neutral, Free from error.' },
@@ -23,6 +25,7 @@ export default [
   },
   {
     num: 3, marks: 12, title: 'Cash vs Accrual / Depreciation',
+    viz: 'depreciationChart',
     cards: [
       { q: 'Accrual records when?', a: 'Revenue when EARNED, expense when INCURRED — not when cash moves.' },
       { q: 'Why depreciate (not expense in full)?', a: 'Matching principle — spread cost over the useful life.' },
@@ -34,6 +37,7 @@ export default [
   },
   {
     num: 4, marks: 12, title: 'Definitions & Recognition Criteria',
+    viz: 'fiveElements',
     cards: [
       { q: 'Asset =', a: 'Present economic resource, CONTROLLED, from a PAST event (future benefits).' },
       { q: 'Liability =', a: 'Present OBLIGATION to transfer a resource, from a past event.' },
@@ -44,6 +48,7 @@ export default [
   },
   {
     num: 5, marks: 10, title: 'Transaction Analysis (Accounting Equation)',
+    viz: 'accountingEquation',
     cards: [
       { q: 'The equation?', a: 'Assets = Liabilities + Equity.' },
       { q: 'Buy an asset with cash?', a: 'Asset swap — total assets unchanged.' },
@@ -54,6 +59,7 @@ export default [
   },
   {
     num: 6, marks: 10, title: 'Balance Day Adjustments',
+    viz: 'adjustmentsMatrix',
     cards: [
       { q: 'Accrued revenue?', a: 'Earned, not received → Asset ↑, Revenue ↑.' },
       { q: 'Accrued expense?', a: 'Incurred, not paid → Liability ↑, Expense ↑.' },
@@ -64,6 +70,7 @@ export default [
   },
   {
     num: 7, marks: 12, title: 'Financial Statements & Cash Flows',
+    viz: 'cashFlowBuckets',
     cards: [
       { q: 'Three cash-flow sections?', a: 'Operating, Investing, Financing.' },
       { q: 'Operating =', a: 'Day-to-day: customers, suppliers, wages, interest paid.' },
@@ -75,6 +82,7 @@ export default [
   },
   {
     num: 8, marks: 8, title: 'Cost-Volume-Profit (CVP)',
+    viz: 'breakEvenChart',
     cards: [
       { q: 'Contribution margin / unit?', a: 'Selling price − Variable cost.' },
       { q: 'Break-even (units)?', a: 'Fixed costs ÷ CM per unit.' },
@@ -85,6 +93,7 @@ export default [
   },
   {
     num: 9, marks: 8, title: 'Performance Measurement (ROI & RI)',
+    viz: 'roiVsRi',
     cards: [
       { q: 'ROI formula?', a: 'Operating Profit ÷ Total Investment × 100.' },
       { q: 'Residual Income (RI)?', a: 'Operating Profit − (Required rate × Investment).' },
@@ -95,6 +104,7 @@ export default [
   },
   {
     num: 10, marks: 12, title: 'Financial Statement Analysis / DuPont',
+    viz: 'dupontTree',
     cards: [
       { q: 'Profit margin?', a: 'Net Profit ÷ Sales × 100.' },
       { q: 'Asset turnover?', a: 'Sales ÷ Average Total Assets.' },

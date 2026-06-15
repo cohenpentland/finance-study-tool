@@ -1,5 +1,6 @@
 import React from 'react';
 import studyNotes from '../data/studyNotes.js';
+import { Diagram } from './diagrams.jsx';
 
 const ACCENTS = {
   blue: 'border-blue-500/40 bg-blue-500/5',
@@ -88,6 +89,10 @@ function Section({ section }) {
         </div>
       </div>
     );
+  }
+
+  if (section.type === 'visual') {
+    return <Diagram name={section.key} caption={section.caption} />;
   }
 
   if (section.type === 'table') {

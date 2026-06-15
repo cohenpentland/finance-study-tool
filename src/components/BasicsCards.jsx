@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import basics from '../data/basics.js';
+import { Diagram } from './diagrams.jsx';
 
 // "The Basics" — quick cram flip-cards, the must-know essentials for each exam
 // question. Tap a card to flip it; "Reveal all" flips a whole question at once.
@@ -47,6 +48,12 @@ export default function BasicsCards() {
                   {allShown ? 'Hide all' : 'Reveal all'}
                 </button>
               </div>
+
+              {g.viz && (
+                <div className="mb-3 sm:max-w-md">
+                  <Diagram name={g.viz} />
+                </div>
+              )}
 
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {g.cards.map((c, i) => {

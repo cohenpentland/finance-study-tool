@@ -16,6 +16,11 @@ export default {
         body: 'Accounting is an information system that IDENTIFIES, RECORDS and COMMUNICATES the economic events of an entity to help users make decisions. It splits into two branches: FINANCIAL accounting (mainly for external users) and MANAGEMENT accounting (internal only).',
       },
       {
+        type: 'visual',
+        key: 'businessStructures',
+        caption: 'Liability by structure — only a company is limited.',
+      },
+      {
         type: 'table',
         heading: 'Financial vs Management Accounting',
         columns: ['Feature', 'Financial', 'Management'],
@@ -69,6 +74,11 @@ export default {
         body: 'The Conceptual Framework sets the qualities that make financial information USEFUL for decisions. There are two FUNDAMENTAL characteristics (information must have both) and four ENHANCING characteristics that improve usefulness.',
       },
       {
+        type: 'visual',
+        key: 'qualitativePyramid',
+        caption: 'Fundamentals first; the four enhancing qualities build on top.',
+      },
+      {
         type: 'cards',
         heading: 'Two Fundamental Characteristics',
         items: [
@@ -100,6 +110,11 @@ export default {
         type: 'intro',
         heading: 'Cash vs Accrual Accounting',
         body: 'CASH accounting records transactions only when cash is received or paid. ACCRUAL accounting records revenue when EARNED and expenses when INCURRED, regardless of the cash flow. AASB requires the accrual basis for general-purpose reports because it applies the matching principle and gives a truer picture of performance.',
+      },
+      {
+        type: 'visual',
+        key: 'depreciationChart',
+        caption: 'Carrying amount falls $1,000 a year to $0 (straight-line).',
       },
       {
         type: 'table',
@@ -144,6 +159,11 @@ export default {
         body: 'The Conceptual Framework defines five building blocks. Knowing the precise definitions — and applying each criterion to the scenario — is high-value exam content (Q4 is 12 marks of analysis).',
       },
       {
+        type: 'visual',
+        key: 'fiveElements',
+        caption: 'The five elements — recognise if relevant + faithfully represented.',
+      },
+      {
         type: 'cards',
         heading: 'The Five Elements',
         items: [
@@ -183,6 +203,11 @@ export default {
         body: 'Every transaction is recorded so the accounting equation stays in balance. Each transaction has a MINIMUM of two effects (dual effect) — this is the heart of double-entry accounting.',
       },
       {
+        type: 'visual',
+        key: 'accountingEquation',
+        caption: 'Assets = Liabilities + Equity — it always balances.',
+      },
+      {
         type: 'formulas',
         heading: 'The Equation',
         items: [
@@ -218,6 +243,11 @@ export default {
         type: 'intro',
         heading: 'Balance Day Adjustments',
         body: 'Accounting divides the business’s life into artificial reporting periods. Balance day adjustments are end-of-period entries that apply the ACCRUAL basis — putting revenues and expenses in the correct period regardless of when cash moved.',
+      },
+      {
+        type: 'visual',
+        key: 'adjustmentsMatrix',
+        caption: 'Accruals vs prepayments — and whether each is an asset or a liability.',
       },
       {
         type: 'table',
@@ -268,6 +298,11 @@ export default {
         body: 'The statements tell a connected story. Note there are FOUR — the Statement of Changes in Equity links profit to the Balance Sheet.',
       },
       {
+        type: 'visual',
+        key: 'statementsFlow',
+        caption: 'How the four statements connect (profit → equity → balance sheet).',
+      },
+      {
         type: 'cards',
         heading: 'The Four Statements',
         items: [
@@ -298,6 +333,11 @@ export default {
         note: 'Exam traps: interest PAID = Operating (AASB); dividends paid = Financing; equipment refund = Investing.',
       },
       {
+        type: 'visual',
+        key: 'cashFlowBuckets',
+        caption: 'The three cash-flow sections and what falls in each.',
+      },
+      {
         type: 'callout',
         tone: 'key',
         body: 'Profit ≠ Cash. A profitable business can still run out of cash. Positive OPERATING cash flow is the key sign of health. Net change in cash = Operating + Investing + Financing.',
@@ -311,6 +351,11 @@ export default {
         type: 'intro',
         heading: 'What is CVP Analysis?',
         body: 'Cost-Volume-Profit analysis examines how costs, volume and price affect profit. It is a MANAGEMENT accounting tool for planning profit, break-even, target profit, and short-term decisions. Key assumption: costs are either FIXED or VARIABLE.',
+      },
+      {
+        type: 'visual',
+        key: 'breakEvenChart',
+        caption: 'Break-even = where the revenue and cost lines cross (café: 500 units).',
       },
       {
         type: 'cards',
@@ -360,6 +405,11 @@ export default {
         type: 'intro',
         heading: 'Performance Measurement',
         body: 'Organisations set a mission → strategy → objectives, then measure whether objectives are met. How performance is measured depends on the type of RESPONSIBILITY CENTRE a manager runs.',
+      },
+      {
+        type: 'visual',
+        key: 'roiVsRi',
+        caption: 'ROI favours Beta (17.5%); RI favours Alpha ($150k) — they can disagree.',
       },
       {
         type: 'table',
@@ -416,6 +466,11 @@ export default {
         type: 'intro',
         heading: 'Financial Statement Analysis',
         body: 'Ratios turn raw statements into insight. Always compare to a benchmark: prior years (intra-entity / trend), competitors (inter-entity), or industry averages. There are FOUR categories of ratios.',
+      },
+      {
+        type: 'visual',
+        key: 'dupontTree',
+        caption: 'DuPont splits ROA into profit margin × asset turnover.',
       },
       {
         type: 'table',
